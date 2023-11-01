@@ -116,7 +116,8 @@
       admin: ['{{ .Site.Params.Gitalk.owner }}'],
       id: md5(location.pathname),
       distractionFreeMode: Boolean('{{ .Site.Params.Gitalk.distractionFreeMode }}'),
-      language: '{{ .Site.Params.Gitalk.language }}'
+      language: '{{ .Site.Params.Gitalk.language }}',
+      body: location.href
     });
     (function() {
       if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
